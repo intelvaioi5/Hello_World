@@ -10,11 +10,11 @@ pipeline{
 
     stages{
 
-        stage('Build Prject'){
+        stage('Clean Project'){
 
             steps{
 
-                sh 'mvn --version'
+                sh 'mvn clean install package'
             }
 
         }
