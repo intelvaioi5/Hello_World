@@ -14,7 +14,7 @@ pipeline{
 
             steps{
 
-                echo 'mvn --version'
+                sh 'mvn --version'
             }
 
         }
