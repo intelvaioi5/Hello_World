@@ -10,7 +10,7 @@ pipeline{
 
     stages{
 
-        stage('Build Prject){
+        stage('Build Prject'){
 
             steps{
 
