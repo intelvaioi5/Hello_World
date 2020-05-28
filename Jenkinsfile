@@ -1,7 +1,11 @@
 pipeline{
 
   agent any
+  tools{
+	
+	maven M2_Home
  
+ }
   stages{
   
     stage("Git Checkout"){
@@ -12,10 +16,10 @@ pipeline{
     
     stage("MVN Packaging"){
        steps{
-        def M2_Home = tool name: 'M2_HOME', type: 'maven'
-        def mvnCMD = "${M2_Home}/bin/mvn"
-        sh "${mvnCMD} clean package"
-        sh 'pwd'
+        #def M2_Home = tool name: 'M2_HOME', type: 'maven'
+        #def mvnCMD = "${M2_Home}/bin/mvn"
+        #sh "${mvnCMD} clean package"
+		sh 'mvn clean package'
 	   }
     }
     
