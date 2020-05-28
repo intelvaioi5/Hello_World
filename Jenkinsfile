@@ -31,5 +31,5 @@ pipeline{
         sh "ssh -o StrictHostkeyChecking=no ec2-user@54.157.164.125 ${dockerlog}"
 }
     }
- }
- }
+  }
+}
