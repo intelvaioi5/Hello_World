@@ -1,7 +1,8 @@
 pipeline{
 
- node{
-    stage('Git Checkout'){
+ Stages{
+  
+  stage('Git Checkout'){
         
         git 'https://github.com/intelvaioi5/Hello_World.git'
     }
@@ -30,5 +31,5 @@ pipeline{
         sh "ssh -o StrictHostkeyChecking=no ec2-user@54.157.164.125 ${dockerlog}"
 }
     }
-}
-}
+ }
+ }
