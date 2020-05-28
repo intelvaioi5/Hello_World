@@ -4,7 +4,7 @@ pipeline{
  
  Stages{
   
-  stage("Git Checkout"){
+    stage("Git Checkout"){
         
         git 'https://github.com/intelvaioi5/Hello_World.git'
     }
