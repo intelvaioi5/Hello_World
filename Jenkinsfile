@@ -6,4 +6,11 @@ pipeline{
         args  '-v /tmp:/tmp'
     }
  }
+ stages{
+  stage("Build Stage"){
+   steps{
+    echo "This is build stage"
+   }
+  }
+ }
 }
