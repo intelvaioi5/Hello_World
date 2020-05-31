@@ -6,6 +6,9 @@ pipeline{
 	maven M2_Home
  
  }
+	environment{
+	dockerlog = "docker run -p 8080:8080 -d --name tomcat1 dockerfocus/tomcat:1.0.0"
+	}
   stages{
   
     stage("Git Checkout"){
@@ -35,7 +38,7 @@ pipeline{
     }
     stage("create container"){
 	   steps{
-        def dockerlog ='docker run -p 8080:8080 -d --name tomcat1 dockerfocus/tomcat:1.0.0'
+        #def dockerlog ='docker run -p 8080:8080 -d --name tomcat1 dockerfocus/tomcat:1.0.0'
         sshagent(['awslogin']) {
         sh "ssh -o StrictHostkeyChecking=no ec2-user@54.157.164.125 ${dockerlog}"
 }
