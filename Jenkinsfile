@@ -40,7 +40,7 @@ pipeline{
 	   steps{
         
         sshagent(['awslogin']) {
-        sh "ssh -o StrictHostkeyChecking=no ec2-user@54.157.164.125 ${dockerlog}"
+        sh "ssh -o StrictHostkeyChecking=no ec2-user@3.90.80.85 ${dockerlog}"
 }
  }
     }
